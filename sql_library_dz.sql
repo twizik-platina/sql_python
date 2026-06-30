@@ -1,0 +1,43 @@
+-- CREATE TABLE genres (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(100) NOT NULL UNIQUE,
+--     description VARCHAR(500) NOT NULL
+-- );
+
+-- CREATE TABLE books (
+--     id SERIAL PRIMARY KEY,
+--     title VARCHAR(150) NOT NULL,
+--     author VARCHAR(100) NOT NULL,
+--     publication_year INTEGER NOT NULL,
+--     pages_count INTEGER NOT NULL,
+--     rating NUMERIC(2, 1) NOT NULL,
+--     is_available BOOLEAN DEFAULT TRUE,
+--     genre_id INTEGER NOT NULL,
+--     CONSTRAINT fk_book_genre
+--         FOREIGN KEY (genre_id)
+--         REFERENCES genres(id)
+--         ON DELETE RESTRICT
+--         ON UPDATE RESTRICT
+-- );
+
+-- INSERT INTO genres (name, description) VALUES
+-- ('Фэнтези', 'Книги с магией, вымышленными мирами и приключениями'),
+-- ('Научная фантастика', 'Книги про технологии, космос, будущее и научные идеи'),
+-- ('Детектив', 'Книги с расследованиями, загадками и поиском преступника'),
+-- ('Программирование', 'Книги про разработку, алгоритмы и компьютерные технологии'),
+-- ('Классика', 'Известные произведения, которые считаются важными в литературе');
+
+-- INSERT INTO books
+-- (title, author, publication_year, pages_count, rating, is_available, genre_id)
+-- VALUES
+-- ('Гарри Поттер и философский камень', 'Дж. К. Роулинг', 1997, 432, 4.8, TRUE, 1),
+-- ('Властелин колец', 'Дж. Р. Р. Толкин', 1954, 1200, 4.9, TRUE, 1),
+-- ('Марсианин', 'Энди Вейер', 2011, 384, 4.7, TRUE, 2),
+-- ('Я, робот', 'Айзек Азимов', 1950, 320, 4.6, FALSE, 2),
+-- ('Убийство в Восточном экспрессе', 'Агата Кристи', 1934, 256, 4.5, TRUE, 3),
+-- ('Шерлок Холмс: Этюд в багровых тонах', 'Артур Конан Дойл', 1887, 224, 4.4, TRUE, 3),
+-- ('Python для детей', 'Джейсон Бриггс', 2013, 344, 4.3, TRUE, 4),
+-- ('Грокаем алгоритмы', 'Адитья Бхаргава', 2016, 288, 4.8, TRUE, 4),
+-- ('Преступление и наказание', 'Фёдор Достоевский', 1866, 672, 4.7, FALSE, 5),
+-- ('Мастер и Маргарита', 'Михаил Булгаков', 1967, 480, 4.9, TRUE, 5);
+
